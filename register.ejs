@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .bgImg{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image:url("https://img.freepik.com/free-vector/isometric-phone-with-hologram-texts_52683-23819.jpg?w=740&t=st=1700339176~exp=1700339776~hmac=a01aa3041bffc36b4e572c608ec16f4fcd6c587c52e554074189637836c32e10");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center ;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="password"],
+        input[type="email"],input[type="text"],
+        input[type="file"] {
+            display: block;
+            margin-bottom:  10px;
+        }
+
+        br {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="bgImg">
+        <div class="register">
+            <form action="" method="post" enctype="multipart/form-data" >
+                <h1>Register</h1>
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <input type="file" name="image" required>
+                <input type="password" name="password" placeholder="Enter password" required>
+                <input type="submit" value="Register"> 
+            </form>
+            <% 
+            if(typeof message !== 'undefined'){
+                %>
+                <p style="color:green;"><%= message%></p>
+                <%
+            }
+            %>
+        </div>
+
+    </div>
+    
+</body>
